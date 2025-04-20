@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>צילום נדל"ן</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            chrome: '#757575',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Hero Section -->
+  <header class="min-h-screen flex flex-col justify-center items-center text-center p-8" data-aos="fade-up">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6">אלון יחזקאל</h1>
+    <p class="text-xl md:text-2xl text-gray-500 mb-8">צלם נדל"ן</p>
+    <a href="#contact" class="bg-chrome hover:bg-gray-400 text-white font-semibold py-3 px-8 rounded-full transition">שלח הצעה </a>
+  </header>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 px-8 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">השירותים</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+      <div class="p-6 border rounded-xl hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-semibold mb-4">צילום נכסים</h3>
+        <p class="text-gray-500">תמונות איכותיות שמבליטות את הנכס</p>
+      </div>
+      <div class="p-6 border rounded-xl hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-2xl font-semibold mb-4">צילום רחפן</h3>
+        <p class="text-gray-500">צילומי רחפן מרהיבים להבלטת מאפייני הנכס</p>
+      </div>
+      <div class="p-6 border rounded-xl hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-2xl font-semibold mb-4">סיורים ווירטואלים</h3>
+        <p class="text-gray-500">חוויות אינטראקטיביות לקונים ושוכרים מרחוק</p>
+      </div>
+      <div class="p-6 border rounded-xl hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="text-2xl font-semibold mb-4">Twilight Shoots</h3>
+        <p class="text-gray-500">Capture properties with beautiful evening lighting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="py-20 px-8 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">פורטפוליו</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://via.placeholder.com/600x400" alt="Property 1" class="w-full h-64 object-cover hover:scale-105 transition-transform">
+      </div>
+      <div class="overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://via.placeholder.com/600x400" alt="Property 2" class="w-full h-64 object-cover hover:scale-105 transition-transform">
+      </div>
+      <div class="overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="300">
+        <img src="https://via.placeholder.com/600x400" alt="Property 3" class="w-full h-64 object-cover hover:scale-105 transition-transform">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-white">
+    <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">צור קשר</h2>
+  
+    <form action="https://formspree.io/f/YOUR-ID-HERE" method="POST" class="max-w-lg mx-auto flex flex-col gap-6" data-aos="fade-up">
+      <input type="text" name="name" placeholder="שם מלא" required class="p-4 rounded-lg border border-gray-300">
+      <input type="email" name="email" placeholder="אימייל" required class="p-4 rounded-lg border border-gray-300">
+      <textarea name="message" rows="5" placeholder="ההודעה שלך" required class="p-4 rounded-lg border border-gray-300"></textarea>
+      <button type="submit" class="bg-chrome hover:bg-gray-400 text-white py-3 rounded-lg text-xl">שלח הודעה</button>
+    </form>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="text-center text-gray-400 text-sm py-8" data-aos="fade-up">
+    &copy; 2025 כל הזכויות שמורות, VistaLink
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    AOS.init({ once: true });
+  </script>
+
+</body>
+</html>
