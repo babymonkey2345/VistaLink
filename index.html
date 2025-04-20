@@ -190,15 +190,34 @@ setInterval(function() {
 
   <!-- Contact Section -->
   <section id="contact" class="py-20 px-6 bg-white">
-    <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">צור קשר</h2>
-  
-    <form action="https://formspree.io/f/YOUR-ID-HERE" method="POST" class="max-w-lg mx-auto flex flex-col gap-6" data-aos="fade-up">
-      <input type="text" name="name" placeholder="שם מלא" required class="p-4 rounded-lg border border-gray-300">
-      <input type="email" name="email" placeholder="אימייל" required class="p-4 rounded-lg border border-gray-300">
-      <textarea name="message" rows="5" placeholder="ההודעה שלך" required class="p-4 rounded-lg border border-gray-300"></textarea>
-      <button type="submit" class="bg-chrome hover:bg-gray-400 text-white py-3 rounded-lg text-xl">שלח הודעה</button>
-    </form>
-  </section>
+  <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">צור קשר</h2>
+
+  <!-- Formspree action URL -->
+  <form action="https://formspree.io/f/xblgnnwd" method="POST" class="max-w-lg mx-auto flex flex-col gap-6" data-aos="fade-up">
+    
+    <!-- Name input -->
+    <label class="flex flex-col">
+      <span class="text-lg font-medium">שם מלא:</span>
+      <input type="text" name="name" placeholder="הכנס את שמך המלא" required class="p-4 rounded-lg border border-gray-300">
+    </label>
+
+    <!-- Email input -->
+    <label class="flex flex-col">
+      <span class="text-lg font-medium">אימייל:</span>
+      <input type="email" name="email" placeholder="הכנס את האימייל שלך" required class="p-4 rounded-lg border border-gray-300">
+    </label>
+
+    <!-- Message textarea -->
+    <label class="flex flex-col">
+      <span class="text-lg font-medium">ההודעה שלך:</span>
+      <textarea name="message" rows="5" placeholder="הכנס את ההודעה שלך" required class="p-4 rounded-lg border border-gray-300"></textarea>
+    </label>
+
+    <!-- Submit button -->
+    <button type="submit" class="bg-chrome hover:bg-gray-400 text-white py-3 rounded-lg text-xl">שלח הודעה</button>
+  </form>
+</section>
+
   
   <!-- Footer -->
   <footer class="text-center text-gray-400 text-sm py-8" data-aos="fade-up">
