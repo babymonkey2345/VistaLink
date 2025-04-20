@@ -49,16 +49,144 @@
     </div>
   </section>
 
-  <!-- Portfolio Section -->
- <section id="portfolio" class="py-20 px-8 max-w-6xl mx-auto">
+<!-- Portfolio Section -->
+<section id="portfolio" class="py-20 px-8 max-w-6xl mx-auto">
     <h2 class="text-4xl font-bold text-center mb-16" data-aos="fade-up">פורטפוליו</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="overflow-hidden rounded-xl" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://i.imgur.com/0qmKPz2.jpeg" alt="Property 1" class="w-full h-64 object-cover hover:scale-105 transition-transform">
-      </div>
-      <!-- Add more images here if needed -->
+    <div class="slideshow-container relative mx-auto w-full">
+        <!-- Slide 1 -->
+        <div class="mySlides fade">
+            <img src="https://i.imgur.com/0qmKPz2.jpeg" alt="Property 1" class="w-full h-64 object-cover rounded-xl">
+        </div>
+        <!-- Slide 2 (add more images as needed) -->
+        <div class="mySlides fade">
+            <img src="https://i.imgur.com/yourImage2.jpeg" alt="Property 2" class="w-full h-64 object-cover rounded-xl">
+        </div>
+        <div class="mySlides fade">
+            <img src="https://i.imgur.com/yourImage3.jpeg" alt="Property 3" class="w-full h-64 object-cover rounded-xl">
+        </div>
+
+        <!-- Next and Previous Buttons -->
+        <a class="prev absolute top-1/2 left-4 text-white text-3xl bg-black bg-opacity-50 rounded-full p-2 cursor-pointer" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next absolute top-1/2 right-4 text-white text-3xl bg-black bg-opacity-50 rounded-full p-2 cursor-pointer" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Dots under slideshow -->
+    <div class="text-center mt-4">
+        <span class="dot inline-block w-3 h-3 mx-1 bg-gray-400 rounded-full cursor-pointer" onclick="currentSlide(1)"></span>
+        <span class="dot inline-block w-3 h-3 mx-1 bg-gray-400 rounded-full cursor-pointer" onclick="currentSlide(2)"></span>
+        <span class="dot inline-block w-3 h-3 mx-1 bg-gray-400 rounded-full cursor-pointer" onclick="currentSlide(3)"></span>
     </div>
 </section>
+
+<!-- Add custom CSS for the slideshow -->
+<style>
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .mySlides {
+    display: none;
+  }
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.3s;
+    user-select: none;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .prev {
+    left: 15px;
+  }
+  .next {
+    right: 15px;
+  }
+
+  /* Dots */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fade animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+</style>
+
+<script>
+// Slideshow functionality
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+// Show slides
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+// Automatic slideshow
+setInterval(function() {
+  plusSlides(1);
+}, 4000); // Change image every 4 seconds
+</script>
+
 
   <!-- Contact Section -->
   <section id="contact" class="py-20 px-6 bg-white">
